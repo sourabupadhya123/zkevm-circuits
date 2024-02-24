@@ -2,11 +2,11 @@
 
 ## Mainnet
 
-Testings in `mainnet.rs` enable accessing a RPC node with debug API, and test any block or single transaction from the node. Trace and block witness would be rebuilt from the input data (block or tx) and then being mocking proven by a specified circuit.
+Testing in `mainnet.rs` enable accessing a RPC node with debug API, and test any block or single transaction from the node. Trace and block witness would be rebuilt from the input data (block or tx) and then being mocking proven by a specified circuit.
 
 The running parameters are specified by environment variables:
 
-* CIRCUIT: the circuit used to launch mocking proven, can be `super` (by default), `evm`, `copy`, `rlp`, `tx`, `state`, and we can use `none` to make a dry-run (no provding but only building of witness)
+* CIRCUIT: the circuit used to launch mocking proven, can be `super` (by default), `evm`, `copy`, `rlp`, `tx`, `state`, and we can use `none` to make a dry-run (no providing but only building of witness)
 * GETH0_URL: the url of RPC node, like "https://eth-goerli.g.alchemy.com/v2/"
 
 For testing block, we specify blocks inside a range by `START_BLOCK` and `END_BLOCK`:
@@ -29,4 +29,4 @@ To support most txs in mainnet some features are still missed:
 
 And for support most blocks in mainnet require more features:
 - [ ] Support >128 max txs for rlp / sig circuit
-- [ ] large copy data (> 500,000 which is hardcoded currently, 1.5M is adviced)
+- [ ] large copy data (> 500,000 which is hardcoded currently, 1.5M is advised)
